@@ -1,27 +1,95 @@
-# FrontendTestePratico
+# Sobre o projeto:
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/emerson-roots/teste_pratico_frontend_video/blob/master/LICENSE)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
+![NPM](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
+![NPM](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) 
+![NPM](https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white) 
+![NPM](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) 
+![NPM](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) 
+![NPM](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white) 
+![NPM](https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Link YouTube para video demonstração do projeto **FINALIZADO**; 
+- https://youtu.be/DRtIStmbnJE
 
-## Code scaffolding
+Link YouTube demonstrando parte do processo de desenvolvimento FRONTEND (Requisito: 1 hora de video); 
+- https://youtu.be/4aFFoLzTf4A
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Teste prático desenvolvendo um CRUD para participar de processo seletivo.
+### Os requisitos são;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Crud de Contêiner
+- Cliente
+- Número do contêiner (4 letras e 7 números. Ex: TEST1234567)
+- Tipo: 20 / 40
+- Status: Cheio / Vazio
+- Categoria: Importação / Exportação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Crud de Movimentações
+- Tipo de Movimentação (Embarque, Descarga, Gate In, Gate out, Posicionamento
+Pilha, Pesagem, Scanner)
+- Data e Hora do Início
+- Data e Hora do Fim
 
-## Running end-to-end tests
+Gerar um relatório com o total de movimentações agrupadas por cliente e tipo de
+movimentação.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+No final do relatório deverá conter um sumário com o total de importação / exportação.
 
-## Further help
+# 🛠 Skills utilizadas
+	
+### FRONTEND
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-	Angular 12
+-	Node.js
+-	HTML/CSS
+-	Bootstrap 4
+
+### BACKEND (LINK PARA REPOSITORIO GITHUB: https://github.com/emerson-roots/teste_pratico)
+-	Java 11
+-	Padrão API Rest
+-	Spring Boot
+-	JPA/Hibernate
+-	Maven
+-	Banco de dados H2 (banco em memória)
+
+
+
+# Como executar o projeto LOCALMENTE
+
+## Pré-requisitos: 
+- Angular CLI: 12.0.2
+- node.js version 12.18.3
+- npm version 6.14.6
+
+
+```bash
+# na linha de comando, clonar repositório
+git clone https://github.com/emerson-roots/teste_pratico_frontend_video
+
+# entrar na pasta do projeto clonado
+
+# fazer install das dependências através do comando (aguarde o download e instalação):
+npm install
+
+# iniciar a aplicação através do comando:
+ng serve --open
+
+# se o comando anterior não abrir o navegador automáticamente, 
+# teste a aplicação através da URL (lembre-se de confirmar a porta padrão da sua máquina):
+http://localhost:4200/ 
+
+
+# pausar/stopar aplicação
+CTRL+C na linha de comando
+```
+
+
+# 🚀 Autor
+
+*Emerson Melo de Lima*
+
+emerson_sardinha@hotmail.com
