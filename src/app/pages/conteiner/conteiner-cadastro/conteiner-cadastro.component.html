@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+
+<app-sidebar>
+
+  <!-- conteudo ng-content -->
+  <div class="card">
+    <h4 class="card-header text-center">Cadastro de Conteiner</h4>
+    <div class="card-body">
+      <!-- FORM -->
+      <form class="container" [formGroup]="formGroup">
+        <div class="form-row">
+
+          <!-- cliente -->
+          <div class="form-group col-md-6">
+            <label for="cliente">Cliente</label>
+            <input type="text" class="form-control" formControlName="cliente" id="cliente" placeholder="Cliente">
+              <app-show-validation-errors [formCtrl]="formGroup.get('cliente')"></app-show-validation-errors>
+          </div>
+          <!-- codigoConteiner -->
+          <div class="form-group col-md-6">
+            <label for="codigoConteiner">Código Conteiner (4 letras maiúsculas e 7 números)</label>
+            <input mask="AAAA0000000" maxlength="11" type="text" class="form-control" formControlName="codigoConteiner"
+              id="codigoConteiner" placeholder="ABCD1234567">
+              <app-show-validation-errors [formCtrl]="formGroup.get('codigoConteiner')"></app-show-validation-errors>
+          </div>
+        </div>
+        <!-- tipoConteiner -->
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="tipoConteiner">Tipo Conteiner</label>
+            <select formControlName="tipoConteiner" id="tipoConteiner" class="form-control">
+              <option value="">Selecione...</option>
+              <option *ngFor="let tipo of tiposConteiner" [ngValue]="tipo">{{ tipo }}</option>
+            </select>
+            <app-show-validation-errors [formCtrl]="formGroup.get('tipoConteiner')"></app-show-validation-errors>
+          </div>
+          <!-- status -->
+          <div class="form-group col-md-4">
+            <label for="status">Status</label>
+            <select formControlName="status" id="status" class="form-control">
+              <option value="">Selecione...</option>
+              <option *ngFor="let stat of status" [ngValue]="stat">{{ stat }}</option>
+            </select>
+            <app-show-validation-errors [formCtrl]="formGroup.get('status')"></app-show-validation-errors>
+          </div>
+          <!-- categoria -->
+          <div class="form-group col-md-4">
+            <label for="categoria">Categoria</label>
+            <select formControlName="categoria" id="categoria" class="form-control">
+              <option value="">Selecione...</option>
+              <option *ngFor="let categoria of categorias" [ngValue]="categoria">{{ categoria }}</option>
+            </select>
+            <app-show-validation-errors [formCtrl]="formGroup.get('categoria')"></app-show-validation-errors>
+          </div>
+        </div>
+
+        <input type="hidden" id="id" name="id" value="" />
+        <button (click)="salvar()" type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+    </div>
+  </div>
+  <!-- fim conteudo ng-content -->
+
+</app-sidebar>

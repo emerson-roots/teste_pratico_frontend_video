@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+
+
+<app-sidebar>
+
+  <!-- conteudo ng-content -->
+  <div class="card">
+    <h4 class="card-header text-center">Cadastro de Movimentações de Conteiners</h4>
+    <div class="card-body">
+
+      <section>
+        <div>
+          <!-- FORM -->
+          <form class="container">
+            <div class="form-row">
+
+              <div class="form-group col-md-6">
+                <label for="dataHoraInicio">Data e Hora Inicio</label>
+                <input type="datetime"
+                  mask="00/00/0000 00:00" [showMaskTyped]="true" [dropSpecialCharacters]="false" class="form-control"
+                  formControlName="dataHoraInicio" id="dataHoraInicio" placeholder="Data Hora Inicio">
+                <app-show-validation-errors [formCtrl]="formGroup.get('dataHoraInicio')"></app-show-validation-errors>
+              </div>
+
+
+              <div class="form-group col-md-6">
+                <label for="dataHoraFim">Data e Hora Fim</label>
+                <input type="datetime"
+                  mask="00/00/0000 00:00" [showMaskTyped]="true" [dropSpecialCharacters]="false"
+                  formControlName="dataHoraFim" class="form-control" id="dataHoraFim" value="" placeholder="Data Fim">
+                <app-show-validation-errors [formCtrl]="formGroup.get('dataHoraFim')"></app-show-validation-errors>
+              </div>
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group col-md-6">
+                <label for="conteiner">Conteiner</label>
+                <select formControlName="conteiner"
+                  id="conteiner" class="form-control">
+                  <option value="">Selecione...</option>
+                  <option *ngFor="let conteiners of conteinerDTO" [ngValue]="conteiners">{{ conteiners.codigoConteiner
+                    }}</option>
+                </select>
+                <app-show-validation-errors [formCtrl]="formGroup.get('conteiner')"></app-show-validation-errors>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="tipoMovimentacao">Tipo Movimentação</label>
+                <select
+                  formControlName="tipoMovimentacao" id="tipoMovimentacao" class="form-control">
+                  <option value="">Selecione...</option>
+                  <option *ngFor="let tipos of tipoMovimentacoes" [ngValue]="tipos">{{ tipos }}</option>
+                </select>
+                <app-show-validation-errors [formCtrl]="formGroup.get('tipoMovimentacao')"></app-show-validation-errors>
+              </div>
+
+            </div>
+
+            <input type="hidden" id="id" name="id" value="" />
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </form>
+        </div>
+
+      </section>
+    </div>
+  </div>
+  <!-- fim conteudo ng-content -->
+
+</app-sidebar>
